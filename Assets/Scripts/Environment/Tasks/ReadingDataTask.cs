@@ -6,15 +6,12 @@ using UnityEngine;
 namespace Environment.Tasks {
     [CreateAssetMenu(fileName = "ReadingData Task", menuName = "ReadingData Task")]
     public class ReadingDataTask : Task{
-        [SerializeField] Task next_task;
         [SerializeField] string file_name;
         string Json;
         string file_path;
         public Data[] employee_array;
-        public override object Execute(object input = null) {
+        public override void Execute() {
             SaveToArray(Read());
-            PassArrayToSort();
-            return null;
         }
 
         public object Read() {
@@ -32,13 +29,6 @@ namespace Environment.Tasks {
                 employee_array[i] = employees_from_json[i];
             }
             return(employee_array);
-        }
-
-        public object PassArrayToSort() {
-            if (next_task != null) {
-                return next_task.Execute(employee_array);
-            }
-            return employee_array;
         }
     }
 

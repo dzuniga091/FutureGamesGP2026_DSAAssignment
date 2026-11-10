@@ -12,6 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6822374b788cd6679aae331ea9a701ba, type: 3}
   m_Name: ReadingData Task
   m_EditorClassIdentifier: Assembly-CSharp::Environment.Tasks.ReadingDataTask
-  next_task: {fileID: 11400000, guid: c09e68cda289637bdbe6606f6ae73662, type: 2}
   file_name: fullEmployeesList_fixed.json
   employee_array: []

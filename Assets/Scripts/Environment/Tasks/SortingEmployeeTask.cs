@@ -10,11 +10,11 @@ namespace Environment.Tasks
     { // Sorting based on lastEntranceInEngineRoom
         public DateTime[] employee_engine_entrances;
         public Data[] sorted_employees;
-        [SerializeField] Task next_task;
+        public ReadingDataTask employee_data;
 
-        public override object Execute(object input = null)
+        public override void Execute()
         {
-            Data[] employees_to_be_sorted = input as Data[];
+            Data[] employees_to_be_sorted = employee_data.employee_array;
             employee_engine_entrances = new DateTime[employees_to_be_sorted.Length];
             sorted_employees = new Data[employees_to_be_sorted.Length];
 
@@ -35,14 +35,6 @@ namespace Environment.Tasks
                     }
                 }
             }
-
-            //foreach (Data a in sorted_employees) Debug.Log(a.name + " entered the engine room at: " + a.lastEntranceInEngineRoom);
-
-            if (next_task != null)
-            {
-                return next_task.Execute(sorted_employees);
-            }
-            return null;
         }
 
         public void mergesort(DateTime[] input_array, int left, int right)

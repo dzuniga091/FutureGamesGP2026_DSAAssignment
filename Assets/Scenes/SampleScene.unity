@@ -5638,9 +5638,17 @@ PrefabInstance:
       value: 3.0195637
       objectReference: {fileID: 0}
     - target: {fileID: 1261029998129311158, guid: 7d560e7070230eb46aeb1576bedf22f3, type: 3}
+      propertyPath: Task1
+      value: 
+      objectReference: {fileID: 11400000, guid: 3c32440c4f55d16498ecb90b59255746, type: 2}
+    - target: {fileID: 1261029998129311158, guid: 7d560e7070230eb46aeb1576bedf22f3, type: 3}
+      propertyPath: Task2
+      value: 
+      objectReference: {fileID: 11400000, guid: bd0ce52c1cb3e5749a95b86c009b507e, type: 2}
+    - target: {fileID: 1261029998129311158, guid: 7d560e7070230eb46aeb1576bedf22f3, type: 3}
       propertyPath: testTask
       value: 
-      objectReference: {fileID: 11400000, guid: e531edf253420e1beac14ece3d00acdd, type: 2}
+      objectReference: {fileID: 11400000, guid: 7cd2162e8bbd78f479d6cbf3e8a0d6a5, type: 2}
     - target: {fileID: 5694532769315531512, guid: 7d560e7070230eb46aeb1576bedf22f3, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
