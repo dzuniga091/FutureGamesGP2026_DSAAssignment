@@ -1,4 +1,5 @@
 using System;
+using System.Diagnostics;
 using System.Globalization;
 using System.IO;
 using Unity.VisualScripting;
@@ -16,8 +17,12 @@ namespace Environment.Tasks
 
         public override void Execute()
         {
-            Data[] employees_to_be_searched = employee_data.sorted_employees;
+            Stopwatch watch = new Stopwatch();
+            watch.Start();
+            employees_to_be_searched = employee_data.sorted_employees;
             BinaryRange(employees_to_be_searched, lower_bound, upper_bound);
+            UnityEngine.Debug.Log(watch.ElapsedMilliseconds + " milliseconds");
+            watch.Stop();
         }
 
         public int BinarySearch(DateTime[] input_array, String input_string, String bound_to_search) // up here we probably will need DateTime parameters titled min and max
@@ -56,7 +61,6 @@ namespace Environment.Tasks
 
         public Data[] BinaryRange(Data[] input_array, String lower_bound, String upper_bound)
         {
-            Debug.Log(input_array.Length);
             DateTime[] engine_entrances = new DateTime[input_array.Length];
             for (int i = 0; i < input_array.Length; i++)
             {
@@ -66,7 +70,7 @@ namespace Environment.Tasks
             int end_index = BinarySearch(engine_entrances, upper_bound, "upper");
             Data[] resulting_array = new Data[(end_index - start_index) + 1];
             Array.Copy(input_array, start_index, resulting_array, 0, resulting_array.Length);
-            foreach (Data a in resulting_array) Debug.Log(a.name);
+            //foreach (Data a in resulting_array) Debug.Log(a.name);
             return resulting_array;
         }
     }

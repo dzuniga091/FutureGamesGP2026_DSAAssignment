@@ -5646,6 +5646,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: bd0ce52c1cb3e5749a95b86c009b507e, type: 2}
     - target: {fileID: 1261029998129311158, guid: 7d560e7070230eb46aeb1576bedf22f3, type: 3}
+      propertyPath: Task3
+      value: 
+      objectReference: {fileID: 11400000, guid: 87398654e9a4fac40be92dce32f60869, type: 2}
+    - target: {fileID: 1261029998129311158, guid: 7d560e7070230eb46aeb1576bedf22f3, type: 3}
       propertyPath: testTask
       value: 
       objectReference: {fileID: 11400000, guid: 7cd2162e8bbd78f479d6cbf3e8a0d6a5, type: 2}
