@@ -51,7 +51,7 @@ namespace Environment.Tasks {
                     queue.Enqueue(current_node.right_child);
                 }
             }
-            //foreach (Data employee in employees_within_range) Debug.Log(employee.name);
+            foreach (Data employee in employees_within_range) UnityEngine.Debug.Log(employee.name);
         }
 
         //Insert search function here
